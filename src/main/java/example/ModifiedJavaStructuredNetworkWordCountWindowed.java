@@ -93,6 +93,7 @@ public final class ModifiedJavaStructuredNetworkWordCountWindowed
         {
             // Group the data by window and word and compute the count of each group
             Dataset<Row> windowedCounts = words
+                                               // .select("word", "timestamp")
                                                // .withWatermark("timestamp", "1 second")
                                                .groupBy(
                                                         functions.window(words.col("timestamp"), windowDuration, slideDuration),
