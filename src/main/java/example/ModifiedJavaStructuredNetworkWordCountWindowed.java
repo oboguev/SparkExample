@@ -51,7 +51,7 @@ public final class ModifiedJavaStructuredNetworkWordCountWindowed
 
         SparkSession spark = SparkSession
                                          .builder()
-                                         .appName("JavaStructuredNetworkWordCountWindowed")
+                                         .appName("ModifiedJavaStructuredNetworkWordCountWindowed." + System.currentTimeMillis())
                                          .config("spark.master", "local[*]")
                                          .getOrCreate();
 
